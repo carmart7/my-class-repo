@@ -1,30 +1,46 @@
+<!-- addedd doctype html -->
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- moved title element to be a child of head -->
+  <title>Fix The HTML</title>
 </head>
 
-<title>Fix The HTML</title>
 <body>
-  <h1>Welcome</h2>
-  <hr></hr>
+  <!-- Changed closing tag to h1 -->
+  <h1>Welcome</h1>
+  <!-- removed second hr closing tag because it closes itself -->
+  <hr/>
   
-  <img width="200" src="https://www.catster.com/wp-content/uploads/2018/05/A-gray-cat-crying-looking-upset.jpg" alt="Funny Cat"></img>
+  <!-- removed closing tag -->
+  <img width="200" src="https://www.catster.com/wp-content/uploads/2018/05/A-gray-cat-crying-looking-upset.jpg" alt="Funny Cat"/>
   
-  <h3>Some Todos</h3>
+  <!-- Changed to h2 to keep heading attributes in sequential order -->
+  <h2>Some Todos</h2>
   <ol>
     <li>Learn HTML</li>
     <li>Learn CSS</li>
     <li>Learn JavaScript</li>
-  <ol>
+    <!-- added closing tag to ol -->
+  </ol>
 
-  <h3>Some Helpful Links</h3>
+  <!-- Changed to h2 to keep heading attributes in sequential order -->
+  <h2>Some Helpful Links</h2>
   <ul>
     <li><a href="http://html5doctor.com/" target="_blank">HTML5 Doctor</a></li>
     <li><a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer Network</a></li>
     <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
   </ul>
-  <br></br>
-<iframe type="text/html" width="640" height="390" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com" frameborder="0">
 
-<body>
-<html>
+  <!-- removed closing br tag because its a single tag that closes itself -->
+  <br/>
+
+  <!-- added closing tag to iframe -->
+<iframe type="text/html" width="640" height="390" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com" frameborder="0"></iframe>
+
+  <!-- closed body element -->
+</body>
+
+  <!-- added closing tag to html element -->
+</html>
