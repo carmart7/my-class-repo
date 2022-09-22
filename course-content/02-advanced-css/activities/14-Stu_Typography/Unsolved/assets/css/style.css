@@ -1,5 +1,6 @@
 /* TODO: Set the font size and line height */
 body {
+  font-size: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -13,16 +14,30 @@ header {
   color: #fff;
 }
 
+h1, h2, h3 {
+  font-family: serif;
+}
+
 /* TODO: Change the heading size to 200%, give it a margin all around, and assign font family to serif */
 h1 {
+  font-size: 200%;
+  margin: 2%;
+
 }
 
 /* TODO: Change the heading size to be slightly smaller than h1, give it a margin only on the top and bottom, and assign font family to serif */
 h2 {
+  font-size: 175%;
+  margin: 2%;
+  margin-bottom: 5%;
+
 }
 
 /* TODO: Change header size to be slightly smaller than h2 and assign font family to serif */
 h3 {
+  font-size: 150%;
+  margin: 2%;
+
 }
 
 nav ul {
@@ -55,10 +70,18 @@ article {
 
 /* TODO: Add a margin to the top and bottom of the paragraphs */
 article p {
+  line-height: 150%;
+  margin: 2%;
 }
 
 /* TODO: Add a margin to indent the list, give it square bullet points, and assign font family to monospace */
 article ul {
+  margin: 2%;
+  font-family: 'Courier New', Courier, monospace;
+  text-indent: 50px;
+  list-style-type: square;
+  list-style-position: inside;
+
 }
 
 aside {
@@ -70,6 +93,13 @@ button {
   width: 100%;
   margin: 2% 0;
   padding: 1%;
+  border-radius: 10px;
+
+}
+
+button {
+  background-color: grey;
+  border-radius: 10px;
 }
 
 footer {

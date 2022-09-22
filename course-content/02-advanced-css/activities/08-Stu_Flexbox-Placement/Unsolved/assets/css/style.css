@@ -46,14 +46,17 @@ footer {
 
 .product button {
   font-size: 150%;
+  margin: auto;
 }
 
 .product-slideshow {
   display: flex;
+  align-items: center;
 }
 
 .product-image {
   width: 100%;
+  /* margin-top: ; */
 }
 
 .product-details {
