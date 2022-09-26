@@ -4,6 +4,7 @@ body {
   line-height: 1.3;
 }
 
+
 header {
   display: flex;
   justify-content: space-between;
@@ -86,6 +87,7 @@ button {
 }
 
 /* What does this CSS rule do? */
+/* Appearance: none is removing the appearance that wold come with select by default to instead put in place our own arrow image on the right side of the selector */
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -113,11 +115,13 @@ select:hover, button:hover {
 }
 
 /* What does this pseudo-class mean? */
+/* changes border when the text input is in focus */
 .text-input:focus {
   border-right-width: 5px;
 }
 
 /* What does this pseudo-class mean? */
+/* When no text is in the text boxes, a dashed border is in place instead of a solid border */
 .text-input:placeholder-shown {
   border-style: dashed;
 }
@@ -137,12 +141,14 @@ select:hover, button:hover {
 }
 
 /* What does this selector do? */
+/* It applies css rules to the next label element after the checkbox element is checked */
 .checkbox:checked + label {
   color: #999999;
   font-style: italic;
 }
 
 /* What does this selector do? */
+/* Greys out the label's message and adds a thanks after the text when the checkbox is checked */
 .checkbox:checked + label::after {
   margin-left: 10px;
   font-size: 90%;
