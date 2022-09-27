@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 * It's done when the message "True ✅ True ✅" is logged when both `expression1` and `expression2` are true.
 
-* It's done when the message "True ✅ False ❌" is logged when `expression1` is true. 
+* It's done when the message "True ✅ False ❌" is logged when `expression1` is true and 'expression2' is false. 
 
 * It's done when the message "False ❌ True ✅" is logged when `expression2` is true. 
 
