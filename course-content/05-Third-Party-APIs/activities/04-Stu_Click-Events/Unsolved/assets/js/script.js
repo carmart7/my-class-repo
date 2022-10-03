@@ -1,4 +1,4 @@
-var passwordBtnEl = $('.password-btn');//is this correct?
+var passwordBtnEl = $('#password-btn');//is this correct? NO SHOULD BE A CLASS
 var passwordDisplayEl = $('#password-display');
 
 // Returns a random character that includes alphanumeric and special character values
@@ -16,7 +16,7 @@ function passwordGenerator(num) {
   return password;
 }
 
-passwordBtnEl.on('dblclick', function () {//selecting an id? 
+passwordBtnEl.on('click', function () {//selecting an id? 
   var newPassword = passwordGenerator(15);
   passwordDisplayEl.text(newPassword);
 });
