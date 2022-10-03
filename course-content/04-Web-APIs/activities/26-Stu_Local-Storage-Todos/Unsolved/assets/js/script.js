@@ -6,12 +6,15 @@ var todoCountSpan = document.querySelector("#todo-count");
 var todos = [];
 
 // TODO: What is the purpose of this function?
+// take todos array and display the information in a list on the page
 function renderTodos() {
   // TODO: Describe the functionality of the following two lines of code.
+  // sets todolist to empty and sets our todo count to the number of todos
   todoList.innerHTML = "";
   todoCountSpan.textContent = todos.length;
   
   // TODO: Describe the functionality of the following `for` loop.
+  // go through todo list and creat todo elements from the information we have saved
   for (var i = 0; i < todos.length; i++) {
     var todo = todos[i];
 
@@ -30,20 +33,25 @@ function renderTodos() {
 // TODO: What is the purpose of the following function?
 function init() {
   // TODO: What is the purpose of the following line of code?
+  // reverses stringify so that we have store it in storedTodos variable
   var storedTodos = JSON.parse(localStorage.getItem("todos"));
   // TODO: Describe the functionality of the following `if` statement.
+  // Checks to see if user has any todo information saved locally 
   if (storedTodos !== null) {
     todos = storedTodos;
   }
   // TODO: Describe the purpose of the following line of code.
+  // renders todo information to the site as a list
   renderTodos();
 }
 
 function storeTodos() {
   // TODO: Describe the purpose of the following line of code.
+  // stores todos in local storage stringified
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 // TODO: Describe the purpose of the following line of code.
+// event listener on todoForm for someone hitting submit
 todoForm.addEventListener("submit", function(event) {
   event.preventDefault();
   var todoText = todoInput.value.trim();
