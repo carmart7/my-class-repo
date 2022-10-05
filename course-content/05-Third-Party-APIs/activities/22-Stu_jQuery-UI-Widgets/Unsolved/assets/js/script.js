@@ -31,6 +31,24 @@ formEl.on('submit', handleFormSubmit);
 
 // Add Autocomplete widget here
 //
-
+$( function() {
+  var availableSkills = [
+    "Writing",
+    "Reading",
+    "Transcribing",
+    "Speaking",
+    "Coaching",
+    "Active Listening"
+  ];
+  $( "#skill-name" ).autocomplete({
+    source: availableSkills
+  });
+} );
 // Add Datepicker widget here
 //
+$( function() {
+  $( "#datepicker" ).datepicker({
+    changeMonth: true,
+    changeYear: true
+  });
+} );
