@@ -30,6 +30,7 @@ var getRepoIssues = function (repo) {
         // What is this checking for? Under what condition will this be `true`?
         // TODO: Write your answer here
         if (response.headers.get('Link')) {
+          console.log(response);
           displayWarning(repo);
         }
       });
