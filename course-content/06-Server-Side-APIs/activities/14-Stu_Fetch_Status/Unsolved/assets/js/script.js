@@ -9,6 +9,9 @@ function getApi(request) {
       console.log(response.status);
       // Then write the conditional based on that response.status value
       // Make sure to display the response on the page
+      if(response.status === 404){
+        responseText.textContent = response.status;
+      }
     })
     .then(function (data) {
       console.log(data);
