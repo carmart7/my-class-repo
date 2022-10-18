@@ -11,9 +11,11 @@ console.log(originalArray);
 
 
 // TODO: Describe how map is working in the example below. What will the value of tripledArray be?
+// Taking original array and multiplying each element by 3
 const tripledArray = originalArray.map(data => data * 3);
 
 // TODO: Describe how map is working in the example below. What will the value of oddOrEven be?
+// New array containing 'even' or 'odd' string based on the numbers in the original array
 const oddOrEven = originalArray.map(num => {
   if (num % 2 === 0) {
     return 'even'
