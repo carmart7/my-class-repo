@@ -1,1 +1,32 @@
-[{"product":"test","review":"test","username":"Test","review_id":"b2ef"}]
+[
+	{
+		"product": "Robot",
+		"review": "This robot is ballin",
+		"username": "carlos",
+		"review_id": "6d66"
+	},
+	{
+		"product": "Cat",
+		"review": "THIS IS COOL",
+		"username": "Carlos",
+		"review_id": "3b46"
+	},
+	{
+		"product": "Another Product",
+		"review": "This one was alright",
+		"username": "carlos",
+		"review_id": "704b"
+	},
+	{
+		"product": "Robot",
+		"review": "This sucked, it tore my house down!",
+		"username": "NEWPERSON",
+		"review_id": "26a4"
+	},
+	{
+		"product": "dwadwadwa",
+		"review": "dwadwadwa",
+		"username": "test",
+		"review_id": "ed6f"
+	}
+]
