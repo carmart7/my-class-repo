@@ -9,5 +9,3 @@ CREATE TABLE students (
   last_name VARCHAR(30) NOT NULL,
   enrolled BOOLEAN NOT NULL
 );
-
-

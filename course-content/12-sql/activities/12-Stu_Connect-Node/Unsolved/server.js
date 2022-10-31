@@ -7,11 +7,12 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+//creates connection based on object provided with the host, user, password, and database keys provided
 const db = mysql.createConnection(
   {
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'myPassw0rd!',
     database: 'classlist_db'
   },
   console.log(`Connected to the classlist_db database.`)
