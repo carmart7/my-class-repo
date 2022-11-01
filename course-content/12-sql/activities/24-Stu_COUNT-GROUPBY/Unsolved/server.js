@@ -17,7 +17,6 @@ const db = mysql.createConnection(
   console.log(`Connected to the books_db database.`)
 );
 
-
 db.query('SELECT COUNT(id) AS total_count FROM favorite_books GROUP BY in_stock', function (err, results) {
   console.log(results);
 });
