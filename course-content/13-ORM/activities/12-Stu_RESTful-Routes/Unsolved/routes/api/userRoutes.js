@@ -7,9 +7,9 @@ const User = require('../../models/User');
 // GET a user
 router.get('/:id', async (req, res) => {
   const userData = await User.findByPk(req.params.id).catch((err) =>
-    res.json(err)
+    res.status(404).json(err)
   );
-  res.json(userData);
+  res.status(200).json(userData);
 });
 
 // UPDATE a user
@@ -18,8 +18,8 @@ router.put('/:id', async (req, res) => {
     where: {
       id: req.params.id,
     },
-  }).catch((err) => res.json(err));
-  res.json(userData);
+  }).catch((err) => res.status(404).json(err));
+  res.status(200).json(userData);
 });
 
 // DELETE a user
@@ -28,8 +28,8 @@ router.delete('/:id', async (req, res) => {
     where: {
       id: req.params.id,
     },
-  }).catch((err) => res.json(err));
-  res.json(userData);
+  }).catch((err) => res.status(404).json(err));
+  res.status(200).json(userData);
 });
 
 module.exports = router;

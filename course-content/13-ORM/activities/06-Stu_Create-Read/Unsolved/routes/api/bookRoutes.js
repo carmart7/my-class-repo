@@ -2,24 +2,30 @@ const router = require('express').Router();
 const Book = require('../../models/Book');
 
 // TODO: Add a comment describing the purpose of this route
+// base api route that returns all books
 router.get('/', (req, res) => {
   // TODO: Add a comment describing the functionality of this method
+  // Reads the entire book table and returns
   Book.findAll().then((bookData) => {
     res.json(bookData);
   });
 });
 
 // TODO: Add a comment describing the purpose of this route
+// /api/papersback get route to return books that are paperback
 router.get('/paperbacks', (req, res) => {
   Book.findAll({
     // TODO: Add a comment describing the functionality of this property
+    // orders books returned based on title
     order: ['title'],
     // TODO: Add a comment describing the functionality of this property
+    // decides what to return based on keys provided (paperback is true to be returned in this case)
     where: {
       is_paperback: true
     },
     attributes: {
       // TODO: Add a comment describing the functionality of this property
+      // removes is_paperback and edition from the output data
       exclude: ['is_paperback', 'edition']
     }
   }).then((bookData) => {
@@ -28,14 +34,17 @@ router.get('/paperbacks', (req, res) => {
 });
 
 // TODO: Add a comment describing the purpose of this route
+// /api/:id get route that returns the book with a specified id
 router.get('/:id', (req, res) => {
   // TODO: Add a comment describing the functionality of this method
+  // goes through all books and finds the book with a specified primary key, then returns
   Book.findByPk(req.params.id).then((bookData) => {
     res.json(bookData);
   });
 });
 
 // CREATE a book
+// post route that creates a new book based on data provided
 router.post('/', (req, res) => {
   Book.create(req.body)
     .then((newBook) => {
