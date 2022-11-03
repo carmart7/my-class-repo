@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
           [
             // Use plain SQL to add up the total mileage
             sequelize.literal(
-              '(SELECT SUM(mileage) FROM car WHERE car.driver_id = driver.id)'
+              '(SELECT SUM(*) FROM car WHERE car.driver_id = driver.id)'
             ),
             'totalMileage',
           ],
