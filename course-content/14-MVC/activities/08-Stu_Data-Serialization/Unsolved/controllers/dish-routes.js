@@ -4,6 +4,13 @@ const Dish = require('../models/Dish');
 
 router.get('/', async (req, res) => {
   // TODO: Build out this route so that it serializes all of the dish objects that it receives. See the 'get' route below for a hint.
+
+    const dishesData = await Dish.findAll();
+    const dishes = dishesData.map((dishData) => dishData.get({ plain: true }));
+    res.render("dish", {dishes});
+
+    res.status(500).json(err);
+
 });
 
 // route to get one dish
