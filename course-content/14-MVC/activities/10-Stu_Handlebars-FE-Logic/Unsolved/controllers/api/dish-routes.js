@@ -17,8 +17,10 @@ router.post('/', async (req, res) => {
 });
 
 // TODO: According to MVC, what is the role of this action method?
+// Controller, controlling when this is executed 
 router.put('/:id', async (req, res) => {
   // TODO: Where is this action method sending the data from the body of the fetch request? Why?
+  // Sending data to database to update the dish data based on the id given
   try {
     const dish = await Dish.update(
     {
@@ -33,6 +35,7 @@ router.put('/:id', async (req, res) => {
       },
     });
     // TODO: If the database is updated successfully, what happens to the updated data below?
+    // it is sent back as a json object
     res.status(200).json(dish);
   } catch (err) {
       res.status(500).json(err);
