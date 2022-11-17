@@ -9,4 +9,8 @@ const pause = milliSeconds => {
   while (new Date().getTime() < startTime + milliSeconds); 
 }
 
-pause(8000);
+// pause(8000);
+
+setTimeout(() => {
+  document.getElementById('submitButton').classList.remove('hidden');
+}, 2000);
