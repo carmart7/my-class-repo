@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 // TODO: Add a comment describing the functionality of the code below
+// Creates a new schema for book
 const bookSchema = new mongoose.Schema({
   title: { type: String, required: true },
   author: { type: String, required: false },
@@ -12,11 +13,13 @@ const bookSchema = new mongoose.Schema({
 });
 
 // TODO: Add a comment describing the functionality of the code below
-const Book = mongoose.model('Book', bookSchema);
+// Assigns model to a variable Book
+const Book = mongoose.model('car', bookSchema);
 
 const handleError = (err) => console.error(err);
 
 // TODO: Add a comment describing the functionality of the code below
+// Creates a book with info
 Book.create(
   {
     title: 'Diary of Anne Frank',
@@ -31,6 +34,7 @@ Book.create(
 
 // TODO: Add a comment describing the difference between this instance being created
 // and the instance that was created above
+// only has info for title and author
 Book.create(
   { title: 'Oh the Places You Will Go!', author: 'Dr. Seuss' },
   (err) => (err ? handleError(err) : console.log('Created new document'))
@@ -38,6 +42,7 @@ Book.create(
 
 // TODO: Add a comment describing the difference between this instance being created
 // and the instance that was created above
+// Only includes the title info because it's required
 Book.create({ title: 'Harold and the Purple Crayon' }, (err) =>
   err ? handleError(err) : console.log('Created new document')
 );

@@ -1,5 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb').MongoClient;
+const ObjectId= require('mongodb').ObjectId;
 
 const app = express();
 const port = 3001;
@@ -44,3 +45,11 @@ app.get('/read', (req, res) => {
 
 
 // TODO: Add Delete route that deletes by id provided in the request body
+app.delete('/delete', (req,res) => {
+  db.collection('bookCollection')
+    .deleteOne({ _id: ObjectId(req.body._id)}, 
+      (err, results) => {
+        if (err) throw err;
+        res.json(results);
+      });
+});
