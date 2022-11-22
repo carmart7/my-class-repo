@@ -4,6 +4,7 @@ module.exports = {
   // Get all users
   getUsers(req, res) {
     User.find()
+      .populate({ path:  'applications'})
       .then((users) => res.json(users))
       .catch((err) => res.status(500).json(err));
   },

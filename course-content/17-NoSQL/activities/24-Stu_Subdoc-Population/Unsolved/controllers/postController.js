@@ -3,6 +3,8 @@ const { Post } = require('../models');
 module.exports = {
   getPosts(req, res) {
     Post.find()
+      // .select('-__v')
+      .populate({ path: 'tags'})
       .then((posts) => res.json(posts))
       .catch((err) => {
         console.error({ message: err });

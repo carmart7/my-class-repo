@@ -16,6 +16,8 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   // TODO: Add comments to the functionality of the createApplication method
+  // Creates application
+  // updates user to include the created application to its applications array property
   createApplication(req, res) {
     Application.create(req.body)
       .then((application) => {
@@ -38,6 +40,8 @@ module.exports = {
       });
   },
   // TODO: Add comments to the functionality of the updateApplication method
+  // updates application based on given parameter applicationId
+  // sets new info on application (runs validators to make sure info follows the model requirements)
   updateApplication(req, res) {
     Application.findOneAndUpdate(
       { _id: req.params.applicationId },
@@ -55,6 +59,7 @@ module.exports = {
       });
   },
   // TODO: Add comments to the functionality of the deleteApplication method
+  // find and remove application based on the application id given in the paramenters
   deleteApplication(req, res) {
     Application.findOneAndRemove({ _id: req.params.applicationId })
       .then((application) =>
@@ -76,6 +81,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   // TODO: Add comments to the functionality of the addTag method
+  // adds a tag to an application (runs validation when adding tag) without adding repeats
   addTag(req, res) {
     Application.findOneAndUpdate(
       { _id: req.params.applicationId },
@@ -90,6 +96,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   // TODO: Add comments to the functionality of the addTag method
+  // removes a tag from an application
   removeTag(req, res) {
     Application.findOneAndUpdate(
       { _id: req.params.applicationId },
