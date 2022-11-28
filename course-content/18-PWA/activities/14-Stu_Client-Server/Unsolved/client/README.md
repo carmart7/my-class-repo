@@ -1,1 +1,2 @@
 [//]: # (TODO: Add comments on what files and directories are included in the client directory)
+<!-- the client folder stores the client side files used that are later displayed to the user. In here the files are then package into the distribution folder -->

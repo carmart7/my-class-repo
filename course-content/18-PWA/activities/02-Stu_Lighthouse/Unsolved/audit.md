@@ -8,10 +8,30 @@ Click on "Expand View" to get more information about the metrics. Make note of t
 
 * First Contentful Paint: 1.0s
 
-* (include as many bullet points as necessary)
+* Time to Interactive 0.3 s
+
+* Speed Index 0.6s
+
+* Total Blocking Time 0 ms
+
+* Largest Contentful Paint 1.1s
+
+* Cumulative Layout Shift 0
 
 ## PWA optimizations
 
 Scroll down the audit report until you see the `PWA` section that lists the PWA optimizations. Make note of the various aspects of a PWA below (the first one is done for you):
 
 * Registers a service worker that controls page and `start_url`
+
+* Configured for a custom splash screen
+
+* Sets a theme color for the address bar.
+
+* Content is sized correctly for the viewport
+
+* Has a <meta name="viewport"> tag with width or initial-scale
+
+* Does not provide a valid apple-touch-icon
+
+* Manifest doesn't have a maskable icon
