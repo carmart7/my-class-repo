@@ -1,0 +1,9 @@
+{
+  "name": "Random Name for my app",
+  "short_name": "RandomShort",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "I dont know what to put here so this is here instead",
+  "background_color": "#ffffff"
+}

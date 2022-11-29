@@ -22,6 +22,19 @@ module.exports = () => {
       new GenerateSW(),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
+        name: 'Random Name for my app',
+        short_name: 'RandomShort',
+        description: 'I dont know what to put here so this is here instead',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        start_url: './',
+        icons: [
+          {
+            src: path.resolve('assets/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+            destination: path.join('assets', 'icons')
+          },
+        ]
       }),
      
     ],
