@@ -1,7 +1,10 @@
 const { gql } = require('apollo-server-express');
+// # TODO: Add a comment describing the functionality of this statement
+// 
 
+// # TODO: Add a comment describing the functionality of this statement
+// defines the Class and Query we can use in our requests
 const typeDefs = gql`
-  # TODO: Add a comment describing the functionality of this statement
   type Class {
     _id: ID
     name: String
@@ -9,7 +12,6 @@ const typeDefs = gql`
     creditHours: Int
   }
 
-  # TODO: Add a comment describing the functionality of this statement
   type Query {
     classes: [Class]
   }

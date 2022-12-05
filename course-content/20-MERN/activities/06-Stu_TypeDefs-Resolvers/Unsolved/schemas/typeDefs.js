@@ -24,6 +24,7 @@ const typeDefs = gql`
     officeHours: String
     officeLocation: String
     studentScore: Float
+    classes: [Class]
   }
 
   type Query {
