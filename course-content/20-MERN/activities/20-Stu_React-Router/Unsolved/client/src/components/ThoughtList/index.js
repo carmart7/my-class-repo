@@ -1,5 +1,6 @@
 import React from 'react';
 // TODO: Add code to import necessary component for creating internal hyperlinks
+import { Link } from 'react-router-dom';
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
@@ -22,6 +23,11 @@ const ThoughtList = ({ thoughts, title }) => {
               <p>{thought.thoughtText}</p>
             </div>
             {/* TODO: Add code to create a link to this thought's single thought page at `/thoughts/<id>` */}
+            <Link
+              to={`/thought/${thought._id}`}
+            >
+              Comment on this thought.
+            </Link>
           </div>
         ))}
     </div>
